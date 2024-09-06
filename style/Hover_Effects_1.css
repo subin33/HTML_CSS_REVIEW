@@ -1,0 +1,58 @@
+    /* Google Web Fonts CDN */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      color: #222;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    /* a tag 는 body tag 를 따르지 않는다. */
+    a{
+      color: #222;
+      text-decoration: none;
+    }
+
+    .items{
+      text-align: center;
+    }
+    /* 기본적으로 div 는 block 요소를 가진다. block 요소는 전체 너비를 차지하고, 다른 요소들이 그 옆에 오지 않도록 다음줄로 밀어낸다. 그래서 inline-block 를 주게되면, 요소들이 가로로 나열되면서 가운데에 정렬된다.   */
+    .item{
+      border: 1px solid #ddd;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      margin: 10px;
+    }
+    .caption{
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      padding-top: 40px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .caption a {
+      color: #fff;
+      background-color: teal;
+      padding: 7px;
+      border-radius: 3px;
+    }
+
+    .caption a:hover{
+      background-color: #fff;
+      color: #222;
+    }
+
+    .item:hover .caption {
+      opacity: 1;
+    }
