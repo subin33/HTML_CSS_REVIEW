@@ -1,0 +1,46 @@
+    /* Google Web Fonts CDN */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body{
+      font-family: "Noto Sans KR", sans-serif;
+      color: #222;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    a{
+      color: #222;
+      text-decoration: none;
+    }
+
+    .gnb{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50px;
+    }
+
+    .gnb a {
+      display: block;
+      font-size: 40px;
+      margin: 30px 0;
+      transition: 0.5s;
+    }
+
+    /* gnb 에 mouse 를 hover 했을 경우  */
+    .gnb:hover a {
+      opacity: 0.3;
+    }
+
+    .gnb a:hover {
+      opacity: 1;
+    }
+
+    .gnb a:before {
+      content: '➡️';
+      margin-right: 10px;
+      opacity: 0;
+    }
+
+    .gnb a:hover::before {
+      opacity: 1;
+    }
